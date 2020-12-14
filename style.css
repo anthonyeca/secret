@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400&display=swap");
+
+/*colors #051e3e • #251e3e • #451e3e • #651e3e • #851e3e*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: url("img/gamer.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Header Y nav bar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0rem 10rem;
+}
+
+#logo {
+  font-family: "Lobster", sans-serif;
+  font-weight: lighter;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+#logo:hover {
+  color: #851e3e;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  padding-left: 8rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+}
+
+header nav ul li a:hover {
+  color: #851e3e;
+}
+
+header nav ul li a::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: #851e3e;
+  transition: 300ms;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+/*NAV BURGER STYLE*/
+
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* CONTENIDO */
+
+.content {
+  position: relative;
+  top: 8rem;
+  height: 400px;
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.games {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.games h1 {
+  position: absolute;
+  top: -6rem;
+  color: white;
+}
+
+.games p {
+  position: absolute;
+  top: 37rem;
+  color: #851e3e;
+}
+
+.games a {
+  color: white;
+  text-decoration: none;
+}
+
+.games a:hover {
+  color: #651e3e;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1350px) {
+  .caja {
+    flex-direction: column;
+    width: 300px;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    margin-left: 1rem;
+  }
+
+  body {
+    background: url("img/gamer.jpg");
+    background-repeat: inherit;
+    background-size: cover;
+  }
+  .content{
+      height: 120px;
+  }
+
+  header {
+    padding: 0;
+    margin-right: 0.5rem;
+  }
+  .games {
+    display: block;
+    height: 10rem;
+  }
+  .games h1 {
+    left:15rem;
+    font-size: 3rem;
+    position: absolute;
+    top: 8rem;
+  }
+  .games p {
+    position: absolute;
+    top: 16rem;
+    left: 15rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .checkbtn {
+    color: white;
+    display: flex;
+  }
+
+  .checkbtn:hover {
+    color: #651e3e;
+  }
+
+  header nav ul {
+    position: fixed;
+    display: block;
+    width: 90%;
+    height: 100vh;
+    background-color: rgba(193, 205, 217, 0.97);
+    z-index: 10;
+    top: 80px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 1%;
+  }
+
+  header nav ul li {
+    display: block;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  header nav ul li a {
+    padding: 10px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+
+  .games {
+    display: block;
+    height: 10rem;
+  }
+  .games h1 {
+    left: 3rem;
+    font-size: 3rem;
+    position: absolute;
+    top: 0px;
+  }
+  .games p {
+    position: absolute;
+    top: 13rem;
+    left: 3rem;
+  }
+}
