@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400&display=swap");
 
+:root {
+  --color-hover-fuente: #4e7f7d;
+}
 /*colors #051e3e • #251e3e • #451e3e • #651e3e • #851e3e*/
+/*colors 2.0 #23313d  #4e7f7d  #cbffd8 */
 
 * {
   padding: 0;
@@ -33,7 +37,7 @@ header {
 }
 
 #logo:hover {
-  color: #851e3e;
+  color: var(--color-hover-fuente);
 }
 
 header nav ul {
@@ -53,7 +57,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #851e3e;
+  color: var(--color-hover-fuente);
 }
 
 header nav ul li a::after {
@@ -61,7 +65,7 @@ header nav ul li a::after {
   width: 0px;
   height: 1px;
   display: block;
-  background: #851e3e;
+  background: var(--color-hover-fuente);
   transition: 300ms;
 }
 
@@ -110,7 +114,7 @@ header nav ul li a:hover::after {
 .games p {
   position: absolute;
   top: 37rem;
-  color: #851e3e;
+  color: #4e7f7d;
 }
 
 .games a {
@@ -119,16 +123,17 @@ header nav ul li a:hover::after {
 }
 
 .games a:hover {
-  color: #651e3e;
+  color: var(--color-hover-fuente);
 }
 
 /*RESPONSIVE*/
 
 @media screen and (max-width: 1350px) {
-  .caja {
-    flex-direction: column;
-    width: 300px;
-    top: 0;
+  body {
+    background-position: center center;
+  }
+  .games p {
+    top: 24rem;
   }
 }
 
@@ -139,11 +144,8 @@ header nav ul li a:hover::after {
 
   body {
     background: url("img/gamer.jpg");
-    background-repeat: inherit;
-    background-size: cover;
-  }
-  .content{
-      height: 120px;
+    background-attachment: fixed;
+    background-position: center center;
   }
 
   header {
@@ -155,26 +157,27 @@ header nav ul li a:hover::after {
     height: 10rem;
   }
   .games h1 {
-    left:15rem;
     font-size: 3rem;
     position: absolute;
     top: 8rem;
   }
   .games p {
     position: absolute;
-    top: 16rem;
     left: 15rem;
   }
 }
 
 @media screen and (max-width: 620px) {
+  body {
+    background-attachment: fixed;
+  }
   .checkbtn {
     color: white;
     display: flex;
   }
 
   .checkbtn:hover {
-    color: #651e3e;
+    color: #4e7f7d;
   }
 
   header nav ul {
