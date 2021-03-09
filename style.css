@@ -132,45 +132,7 @@ header nav ul li a:hover::after {
   body {
     background-position: center center;
   }
-  .games p {
-    top: 24rem;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  #logo {
-    margin-left: 1rem;
-  }
-
-  body {
-    background: url("img/gamer.jpg");
-    background-attachment: fixed;
-    background-position: center center;
-  }
-
-  header {
-    padding: 0;
-    margin-right: 0.5rem;
-  }
-  .games {
-    display: block;
-    height: 10rem;
-  }
-  .games h1 {
-    font-size: 3rem;
-    position: absolute;
-    top: 8rem;
-  }
-  .games p {
-    position: absolute;
-    left: 15rem;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  body {
-    background-attachment: fixed;
-  }
   .checkbtn {
     color: white;
     display: flex;
@@ -185,7 +147,7 @@ header nav ul li a:hover::after {
     display: block;
     width: 90%;
     height: 100vh;
-    background-color: rgba(193, 205, 217, 0.97);
+    background-color: rgba(12, 13, 20, 0.99);
     z-index: 10;
     top: 80px;
     right: -100%;
@@ -209,18 +171,10 @@ header nav ul li a:hover::after {
   }
 
   .games {
-    display: block;
+    display: flex;
     height: 10rem;
   }
-  .games h1 {
-    left: 3rem;
-    font-size: 3rem;
-    position: absolute;
-    top: 0px;
-  }
   .games p {
-    position: absolute;
-    top: 13rem;
-    left: 3rem;
+    top: 27rem;
   }
 }
